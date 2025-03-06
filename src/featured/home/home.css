@@ -1,0 +1,142 @@
+.section2 {
+    width: 100%;
+    padding: 100px;
+    background-color: var(--global-cultured-color);
+  }
+  
+  .section2-container {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .section2-content {
+    width: 50%;
+  }
+  @media(max-width:786px){
+    .section2{
+      padding: 20px;
+      /* text-wrap: balance; */
+    }
+    .section2-container{
+        flex-direction: column;
+    }
+    .section2-content{
+        width: 100%;
+    }
+    .btn-learn{
+      display: flex;
+      justify-content: center;
+    }
+    .section2-image img {
+      margin-top: 10px;
+    }
+  }
+  
+  .section2-content h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--global-raisin-black-color);
+  }
+  
+  .section2-content p {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--global-onyx-color);
+  }
+  
+  .section2-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+/*  */
+.section-three{
+    background-color: #ECE3D7;
+    padding: 20px;
+}
+  .highlightgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 60px;
+    gap: 30px;
+  }
+  @media(max-width:786px){
+    .section-three{
+        width: 100%;
+    }
+  
+  }
+  @media (max-width:1000px) {
+    .highlightgrid{
+        grid-template-columns: 1fr 1fr;
+         
+    }
+    
+  }
+  @media (max-width:786px) {
+    .highlightgrid{
+        grid-template-columns: 1fr;
+        padding: 20px;
+        
+    }
+    .section2-content h2{
+      font-size: 26px;
+    }
+    .para-center{
+      text-align: center;
+    }
+
+    
+  }
+
+  /*  */
+  /* style={{textAlign:"center",fontSize:"40px",margin:"40px auto"}} */
+  .sec-heading{
+    text-align: center;
+    font-size: 40px;
+    margin: 40px auto;
+  }
+  @media(max-width:786px){
+    .sec-heading{
+      margin: auto;
+    }
+  }
+  /* 
+   */
+   .containerfive {
+    background-color: #ECE3D7;
+    padding: 80px;
+   
+  }
+  @media (max-width:786px){
+    .containerfive{
+      padding: 20px;
+    }
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    font-weight: bold;
+  }
+  
+
+  
+  /*.grid-item {*/
+  /*  display: flex;*/
+  /*  flex-direction: column;*/
+  /*  align-items: center; */
+  /*  background-color: white;  */
+  /*}*/
+  
+
+  
+  .user-date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  

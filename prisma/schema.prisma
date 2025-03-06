@@ -1,0 +1,194 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model Properties {
+  id String @id @default(cuid()) @map("_id")
+  slug String @unique
+  Title String
+  description String
+  location String
+  price Int
+  bedrooms Int
+  bathrooms Int
+  images String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("properties")
+}
+
+model Blogs {
+  id String @id @default(cuid()) @map("_id")
+  slug String @unique
+  Title String
+  content String
+  heroImage String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("blogs")
+}
+
+model Taglines {
+  id String @id @default(cuid()) @map("_id")
+  tagline String
+  subTagline String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("taglines")
+}
+
+model OurTeam {
+  id String @id @default(cuid()) @map("_id")
+  description String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("our_team")
+}
+
+
+model OurServices {
+  id String @id @default(cuid()) @map("_id")
+  description String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("our_services")
+}
+
+
+model HomeAbout {
+  id String @id @default(cuid()) @map("_id")
+  title String
+  description String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("home_about")
+}
+
+model AboutUs {
+  id String @id @default(cuid()) @map("_id")
+  title String
+  description String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("about_us")
+}
+
+model OurCoreValue {
+  id String @id @default(cuid()) @map("_id")
+  title String
+  description String
+  createdAt DateTime @default(now())  
+  updatedAt DateTime @updatedAt
+
+  @@map("our_core_value")
+}
+
+
+model OurMission {
+  id String @id @default(cuid()) @map("_id")
+  title String
+  description String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("our_mission")
+}
+
+model Team {
+  id String @id @default(cuid()) @map("_id")
+  name String
+  designation String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("team")
+}
+
+model Insights {
+  id String @id @default(cuid()) @map("_id")
+  title String
+  description String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("insights")
+}
+
+
+model Services {
+  id String @id @default(cuid()) @map("_id")
+  description String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("services")
+}
+
+
+model Apply {
+  id String @id @default(cuid()) @map("_id")
+  title String
+  description String
+  email String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("apply")
+}
+
+model Expectation {
+  id String @id @default(cuid()) @map("_id")
+  title String
+  description String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("expectations")
+}
+
+
+model Experience {
+  id String @id @default(cuid()) @map("_id")
+  experTitle String
+  experDescription String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("experiences")
+}
+
+model CareerDescription {
+  id String @id @default(cuid()) @map("_id")
+  careerDescription String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("career_descriptions")
+}
+
+
+model CareerRealinvte {
+  id String @id @default(cuid()) @map("_id")
+  realinvteTitle String
+  realinvteDescription String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("career_realinvte")
+}
+
+

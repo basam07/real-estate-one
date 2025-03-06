@@ -1,0 +1,10 @@
+
+
+
+.listings-sec{
+    @apply items-center text-center justify-center
+}
+
+.listings-title{
+    @apply mt-16 text-[24px]
+}

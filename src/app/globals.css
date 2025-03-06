@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+    --global-cultured-color: #FAF8F5;
+    --global-white-choco-color :#ECE3D7;
+    --global-raisin-black-color:#212322;
+    --global-onyx-color:#373938;
+
+    font-family: "Inria Serif", serif;
+
+}
+.pad-privacyScreen{
+    padding: 32px;
+}
+
+.servicesPadding{
+    padding: 96px;
+}
+@media(max-width:786px){
+    .servicesPadding{
+        padding: 20px;
+    }
+}
+
+.whiteChoco{
+    background-color: var(--global-white-choco-color);
+}
+
+.home-hero-sec{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../public/bgImage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -20vh;
+}
+
+.hero-sec{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../public/bgImage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -20vh;
+}
+
+.hero-title{
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+
+.hero-sub-title{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+.margin-privacyScreen{
+    margin-top: 48px;
+}
+@media (max-width:786px) {
+    .hero-title{
+        font-size: 30px;
+    }
+    .hero-sub-title{
+
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .pad-privacyScreen{
+        padding: 0;
+    }
+    .margin-privacyScreen{
+        margin-top: 0px;
+    }
+    
+}
+
+.cta_link{
+  background-color: #ECE3D7;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 0 none;
+}
+
+.btn-learn-more{
+  padding: 15px 30px;
+  margin-top:10px ;
+  border: none;
+  background-color: var(--global-white-choco-color);
+}
+
+.center-text {
+    margin: auto;
+    max-width: 890px;
+    padding: 10px;
+    text-align: center;
+  }
+
+.vertical-line {
+     width: 1px;
+     height: 75vh;
+     background-color: #000;
+     border: none;
+ }
+
+
+.fs-18{
+    font-size: 18px;
+}
+.fs-20{
+    font-size: 20px;
+}
+.fs-24{
+    font-size: 24px;
+}
+.fs-32{
+    font-size: 32px;
+}
+.fs-40{
+    font-size: 40px;
+}
+.h-50vh{
+    height: 50vh;
+}
