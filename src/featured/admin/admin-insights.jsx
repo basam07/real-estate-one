@@ -29,9 +29,9 @@ export default async function AdminInsights() {
         className="bg-[#ECE3D7] mb-5"
       >
         {insights.length > 0 ? (
-          insights.map((item) => (
+          insights.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -44,7 +44,7 @@ export default async function AdminInsights() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteInsightButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-insights");
@@ -87,9 +87,9 @@ export default async function AdminInsights() {
         className="bg-[#ECE3D7] mb-5"
       >
         {services.length > 0 ? (
-          services.map((item) => (
+          services.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <p style={{ fontSize: "1.1rem" }}>
@@ -97,7 +97,7 @@ export default async function AdminInsights() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <DeleteServicesButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-insights");

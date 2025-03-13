@@ -7,8 +7,8 @@ const HomeHeroSec = async () => {
     return (
         <div className={'home-hero-sec'}>
             {taglines.length > 0 ? (
-                taglines.map((item) => (
-                    <div key={item.id}>
+                taglines.map((item, index) => (
+                    <div key={index}>
                         <div className={'hero-title'}>{item.tagline || "Elevate Your Investment Experience"}</div>
                         <br />
                         <p className='hero-sub-title'>{item.subTagline || "Discover Curated Luxury Properties and Exceptional Investment Opportunities"}</p>

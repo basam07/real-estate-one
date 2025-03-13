@@ -11,8 +11,8 @@ const Homesection2 = async () => {
       <div className="section2-container">
         <div className="section2-content">
           {homeAbouts.length > 0 ? (
-            homeAbouts.map((item) => (
-              <div key={item.id}>
+            homeAbouts.map((item, index) => (
+              <div key={index}>
                 <h2 className='para-center'>{item.title || "Crafting Excellence in Real Estate Investments"}</h2>
                 <p className='para-center'>
                   {item.description || "At Realinvte, we redefine luxury real estate investment. With a legacy of trust and a reputation for excellence, we empower our clients to build wealth through exclusive opportunities in the world's most coveted markets."}

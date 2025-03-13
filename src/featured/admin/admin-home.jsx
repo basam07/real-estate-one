@@ -41,9 +41,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {taglines.length > 0 ? (
-          taglines.map((item) => (
+          taglines.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -56,7 +56,7 @@ export default async function AdminHome() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteBlogsPageButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-home");
@@ -98,9 +98,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {homeTitle.length > 0 ? (
-          homeTitle.map((item) => (
+          homeTitle.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -113,7 +113,7 @@ export default async function AdminHome() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteAboutButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-home");
@@ -155,9 +155,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {ourTeam.length > 0 ? (
-          ourTeam.map((item) => (
+          ourTeam.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <p style={{ fontSize: "1.1rem" }}>
@@ -166,7 +166,7 @@ export default async function AdminHome() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteTeamButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-home");
@@ -208,9 +208,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {ourServices.length > 0 ? (
-          ourServices.map((item) => (
+          ourServices.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <p style={{ fontSize: "1.1rem" }}>
@@ -219,7 +219,7 @@ export default async function AdminHome() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteOurServicesButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-home");

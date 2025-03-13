@@ -35,9 +35,9 @@ export default async function AdminAbout() {
         className="bg-[#ECE3D7] mb-5"
       >
         {aboutUs.length > 0 ? (
-          aboutUs.map((item) => (
+          aboutUs.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -50,7 +50,7 @@ export default async function AdminAbout() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteAboutUsButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-about");
@@ -93,9 +93,9 @@ export default async function AdminAbout() {
         className="bg-[#ECE3D7] mb-5"
       >
         {coreValues.length > 0 ? (
-          coreValues.map((item) => (
+          coreValues.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -108,7 +108,7 @@ export default async function AdminAbout() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <DeleteCoreValuesButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-about");
@@ -150,9 +150,9 @@ export default async function AdminAbout() {
         className="bg-[#ECE3D7] mb-5"
       >
         {missions.length > 0 ? (
-          missions.map((item) => (
+          missions.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -165,7 +165,7 @@ export default async function AdminAbout() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <DeleteMissionButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-about");
@@ -208,9 +208,9 @@ export default async function AdminAbout() {
         className="bg-[#ECE3D7] mb-5"
       >
         {teamMembers.length > 0 ? (
-          teamMembers.map((item) => (
+          teamMembers.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -222,7 +222,7 @@ export default async function AdminAbout() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <DeleteTeamButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-about");

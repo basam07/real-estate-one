@@ -38,9 +38,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {careerDescriptions.length > 0 ? (
-          careerDescriptions.map((item) => (
+          careerDescriptions.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <p style={{ fontSize: "1.1rem" }}>
@@ -48,7 +48,7 @@ export default async function AdminHome() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteCareerButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-career");
@@ -91,9 +91,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {careerRealinvte.length > 0 ? (
-          careerRealinvte.map((item) => (
+          careerRealinvte.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -105,7 +105,7 @@ export default async function AdminHome() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteRealinvteButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-career");
@@ -161,9 +161,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {experience.length > 0 ? (
-          experience.map((item) => (
+          experience.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -175,7 +175,7 @@ export default async function AdminHome() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteExperiencesButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-career");
@@ -217,9 +217,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {expectations.length > 0 ? (
-          expectations.map((item) => (
+          expectations.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -231,7 +231,7 @@ export default async function AdminHome() {
               </p>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteExpectButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-career");
@@ -273,9 +273,9 @@ export default async function AdminHome() {
         className="bg-[#ECE3D7] mb-5"
       >
         {applies.length > 0 ? (
-          applies.map((item) => (
+          applies.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
             >
               <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
@@ -291,7 +291,7 @@ export default async function AdminHome() {
               </div>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <DeleteApplyButton
-                  id={item.id}
+                  id={index}
                   onDelete={async () => {
                     "use server";
                     revalidatePath("/admin/admin-career");

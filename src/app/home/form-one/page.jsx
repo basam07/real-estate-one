@@ -4,7 +4,7 @@ import {fetchTagline} from "../../../../server/home-title/taglines";
 
 
 const page = async  ({params}) => {
-    const home = await getTagline(params.id);
+    const home = await getTagline(params.slug);
     if (!home) {
       return <div>Data not available</div>;  // Prevents rendering with undefined data
   }
@@ -15,9 +15,9 @@ const page = async  ({params}) => {
   )
 }
 
-async function getTagline(id){
-  if (!id) return null;
-    return fetchTagline(id);
+async function getTagline(slug){
+  if (!slug) return null;
+    return fetchTagline(slug);
 }
 
 export default page;
